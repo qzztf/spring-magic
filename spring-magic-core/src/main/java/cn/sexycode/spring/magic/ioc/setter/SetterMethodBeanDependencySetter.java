@@ -30,14 +30,16 @@ public class SetterMethodBeanDependencySetter implements BeanDependencySetter {
             propertyValue = wrapper.getPropertyValue(depName);
         } catch (BeansException e) {
             if (LOGGER.isLoggable(Level.WARNING)) {
-                LOGGER.info("未获取到 " + bean + " 属性 " + depName + " 值, 异常信息为: " + e.getMessage());
+                String msg = "未获取到 %s 属性 %s 值, 异常信息为:%s";
+                LOGGER.info(String.format(msg, bean, depName, e.getMessage()));
             }
         }
         try {
             wrapper.setPropertyValue(depName, newDep);
         } catch (BeansException e) {
             if (LOGGER.isLoggable(Level.WARNING)) {
-                LOGGER.info("设置 " + bean + " 属性 " + depName + " 值失败, 异常信息为: " + e.getMessage());
+
+                LOGGER.info(String.format("设置 %s 属性 %s 值失败, 异常信息为: %s", bean, depName, e.getMessage()));
             }
         }
         return propertyValue;
