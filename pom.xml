@@ -3,20 +3,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>springo-parent</artifactId>
         <groupId>cn.sexycode</groupId>
-        <artifactId>spring-magic</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
+        <relativePath/>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>spring-magic-build</artifactId>
+    <artifactId>spring-magic</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>../spring-magic-core</module>
+        <module>spring-magic-build</module>
     </modules>
 
-    <name>spring-magic-build</name>
+    <name>spring-magic</name>
     <url>https://github.com/qzzsunly/spring-magic</url>
 
     <properties>
