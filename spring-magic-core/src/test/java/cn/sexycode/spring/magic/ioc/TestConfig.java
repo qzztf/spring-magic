@@ -1,6 +1,7 @@
 package cn.sexycode.spring.magic.ioc;
 
 import cn.sexycode.spring.magic.ioc.setter.BeanDependencySetter;
+import cn.sexycode.spring.magic.ioc.setter.BeanFactoryBeanDependencySetter;
 import cn.sexycode.spring.magic.ioc.setter.SetterMethodBeanDependencySetter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,6 +21,11 @@ public class TestConfig {
         return new SetterMethodBeanDependencySetter(factoryAwareBean);
     }
 
+    @Bean
+    public BeanDependencySetter beanDependencySetter2(BeanFactoryAwareBean factoryAwareBean) {
+        return new BeanFactoryBeanDependencySetter(factoryAwareBean);
+    }
+    
     @Bean
     public BeanService beanService2() {
         return new BeanService();

@@ -16,6 +16,7 @@ public class SetterMethodBeanDependencySetterTest {
     private UserService userService;
 
     @Autowired
+    @Qualifier("beanDependencySetter")
     private BeanDependencySetter setter;
 
     @Autowired
@@ -25,7 +26,7 @@ public class SetterMethodBeanDependencySetterTest {
     @Test
     public void setDependency() {
         userService.hello();
-        setter.setDependency(userService, "beanService", beanService);
+        setter.setDependency("userService", "beanService", "beanService2");
         userService.hello();
     }
 
