@@ -5,7 +5,7 @@
     <parent>
         <artifactId>spring-magic-build</artifactId>
         <groupId>cn.sexycode</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
         <relativePath>../spring-magic-build/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
